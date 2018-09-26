@@ -1,0 +1,43 @@
+﻿
+@model Losning_pizza_oppgave.Models.Pizza
+
+<h2>Bestilling</h2>
+
+<form action="/Pizza/Bestilling" method="post">
+    <table class="table">
+        <tr>
+            <td>PizzaType</td>
+            <td>
+                <select name="pizzaType" class="form-control">
+                    <option value="Margarita (kr 100)">Margarita (kr 100)</option>
+                    <option value="Pizza 2">Pizza 2</option>
+                    <option value="Pizza 2">Pizza 3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>PizzaTykkelse</td>
+            <td class="radio">
+                <input type="radio" name="tykkelse" value="Tynn">Tynn<br>
+                <input type="radio" name="tykkelse" value="Tykk">Tykk<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Antall</td>
+            <td><input type="text" name="antall" /></td>
+        </tr>
+        <tr>
+            <td>Navn</td>
+            <td><input type="text" name="navn" /></td>
+        </tr>
+        <tr>
+            <td>Adresse</td>
+            <td><input type="text" name="adresse" /></td>
+        </tr>
+        <tr>
+            <td>Telefonnr</td>
+            <td><input type="text" name="telefonnr" /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Bestill" name="bestill" class="btn btn-primary"/>
+</form>

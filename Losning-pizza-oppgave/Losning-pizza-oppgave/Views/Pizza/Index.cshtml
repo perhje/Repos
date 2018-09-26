@@ -1,0 +1,54 @@
+﻿@model List<Losning_pizza_oppgave.Models.Pizza>
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            PizzaType
+        </th>
+        <th>
+            Tykkelse
+        </th>
+        <th>
+            Antall
+        </th>
+        <th>
+            Navn
+        </th>
+        <th>
+            Adresse
+        </th>
+        <th>
+            Telefonnr
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.pizzaType
+            </td>
+            <td>
+                @item.tykkelse
+            </td>
+            <td>
+                @item.antall
+            </td>
+            <td>
+                @item.navn
+            </td>
+            <td>
+                @item.adresse
+            </td>
+            <td>
+                @item.telefonnr
+            </td>
+        </tr>
+    }
+
+</table>
+<a href="/Pizza/Bestilling/" class="btn btn-primary">Bestilling</a>
